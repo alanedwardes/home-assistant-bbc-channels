@@ -1,0 +1,16 @@
+{
+  "domain": "bbc_channels",
+  "name": "BBC Channels",
+  "version": "1.0.0",
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io/integrations/bbc_channels",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": [],
+  "homekit": {},
+  "dependencies": [],
+  "codeowners": [
+    "@alanedwardes"
+  ],
+  "iot_class": "local_polling"
+}

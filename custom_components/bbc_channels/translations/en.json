@@ -1,0 +1,18 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "To use BBC services, you must be in the UK and have a TV license.",
+                "data": {
+                    "tv_license": "I have a valid TV license"
+                }
+            }
+        },
+        "error": {
+            "no_license": "Please confirm that you have a valid TV license"
+        },
+        "abort": {
+            "already_configured": "[%key:common::config_flow::abort::already_configured_device%]"
+        }
+    }
+}
