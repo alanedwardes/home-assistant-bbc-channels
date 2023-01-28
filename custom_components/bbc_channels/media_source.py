@@ -68,9 +68,7 @@ class BBcChannelsMediaSource(MediaSource):
 
                 _LOGGER.info(connection)
 
-                return PlayMedia(
-                    connection["href"], "audio/mp3"
-                )  # HACK #video["type"])
+                return PlayMedia(connection["href"], video["type"])
 
     async def async_browse_media(
         self,
@@ -80,8 +78,8 @@ class BBcChannelsMediaSource(MediaSource):
         return BrowseMediaSource(
             domain=DOMAIN,
             identifier=None,
-            media_class=MediaClass.MUSIC,
-            media_content_type="audio/mp3",  # HACK
+            media_class=MediaClass.CHANNEL,
+            media_content_type=MediaType.VIDEO,
             title="BBC Channels",
             can_play=False,
             can_expand=True,
@@ -175,8 +173,8 @@ class BBcChannelsMediaSource(MediaSource):
                 BrowseMediaSource(
                     domain=DOMAIN,
                     identifier=identifier,
-                    media_class=MediaClass.MUSIC,
-                    media_content_type=MediaType.MUSIC,
+                    media_class=MediaClass.CHANNEL,
+                    media_content_type=MediaType.VIDEO,
                     title=name,
                     can_play=True,
                     can_expand=False,
